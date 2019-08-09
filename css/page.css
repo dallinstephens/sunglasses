@@ -1,0 +1,277 @@
+/* navigation bar */
+.navbar {
+  background: #0080ff; /* blue */
+  margin-bottom:0;
+  border-radius: 0;
+}
+
+.navbar-nav {
+    float:none;
+    margin:auto auto;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+
+}
+
+.navbar-nav > li a {
+    color: #ffffff;
+    line-height: 30px;
+}
+
+.navbar-nav > li a:hover {
+   background: #0080ff; /* blue */
+   color: #ffffff;
+}
+
+/* top image and text */
+#top {
+  position: relative;
+  height: 400px;
+}
+
+#top-image {
+  position: absolute;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  -ms-transform: translate(-5%, 0%);
+  transform: translate(-5%, 0%);
+}
+
+#top-text {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  top: 50%;
+  left: 5%;
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+#top-text h1 {
+  font-size: 90px;
+}
+
+#top-text h6 {
+  font-size: 30px;
+}
+
+#top-text-2 h1 {
+  font-size: 90px;
+}
+
+#top-text-2 h6 {
+  font-size: 30px;
+}
+
+/* reposition top-image for medium screens */
+@media only screen and (max-width: 1280px) {
+  #top-image {
+    -ms-transform: translate(-20%, 0%);
+    transform: translate(-20%, 0%);
+  }
+}
+
+/* reposition top-image for small screens */
+@media only screen and (max-width: 1050px) {
+  #top-image {
+    -ms-transform: translate(-25%, 0%);
+    transform: translate(-25%, 0%);
+  }
+}
+
+/* reposition top-image for smaller screens */
+@media only screen and (max-width: 991px) {
+  #top-image {
+    top: -20px;
+    -ms-transform: translate(-35%, 0%);
+    transform: translate(-35%, 0%);
+  }
+}
+
+/* reposition top-image for extra small screens */
+@media only screen and (max-width: 767px) {
+  #top-image {
+    top: -20px;
+    height: 320px;
+    -ms-transform: translate(-45%, 0%);
+    transform: translate(-45%, 0%);
+  }
+}
+
+/* see collection text */
+#see-collection a {
+  text-decoration: none;
+  cursor:pointer;
+}
+
+/* slider margins */
+.slider-margins {
+  margin: 0 50px;
+}
+
+/* slider margins for medium screens and smaller */
+@media only screen and (max-width: 1199px) {
+  .slider-margins {
+    margin: 0 20px;
+  }
+}
+
+/* slider arrow controls */
+.carousel-control.left {
+  margin: 30px 10px 30px -20px;
+  background: none;
+  color: grey;
+  border: 1px solid grey;
+  width: 30px;
+}
+
+.carousel-control.right {
+  margin: 30px -20px 30px 10px;
+  background: none;
+  color: grey;
+  border: 1px solid grey;
+  width: 30px;
+}
+
+.carousel-control.left:hover, .carousel-control.right:hover {
+  background: #f9f9f9;
+}
+
+/* slider arrow font-size */
+.carousel-control .glyphicon-chevron-left:before,
+.carousel-control .glyphicon-chevron-right:before {
+  font-size: 20px;
+}
+
+/* slider arrow positioning */
+.carousel-control .glyphicon-chevron-left:before {
+  position: relative;
+  left: -5px;
+}
+
+.carousel-control .glyphicon-chevron-right:before {
+  position: relative;
+  right: -5px;
+}
+
+/* slider arrow positioning for extra small screens */
+@media only screen and (max-width: 767px) {
+  .carousel-control .glyphicon-chevron-left:before {
+    left: 0px;
+  }
+  .carousel-control .glyphicon-chevron-right:before {
+    right: 0px;
+  }
+}
+
+/* caption original price */
+del {
+  color: #990000; /* red */
+  font-weight: bold;
+}
+
+/* slider control margins */
+#image-slider-lg .row, #image-slider-md .row, #image-slider-sm .row, #image-slider-xs .row {
+  margin:30px 10px;
+}
+
+/* slider image width */
+#image-slider-lg img, #image-slider-md img, #image-slider-sm img, #image-slider-xs img {
+  width: 100%;
+}
+
+/* caption size for large screens */
+#caption-slider-lg h6, #caption-slider-lg p {
+  font-size: 13px;
+}
+
+/* caption size for medium screens */
+#caption-slider-md h6, #caption-slider-md p {
+  font-size: 15px;
+}
+
+/* caption size for small screens */
+#caption-slider-sm h6, #caption-slider-sm p {
+  font-size: 15px;
+}
+
+/* caption size for extra small screens */
+#caption-slider-xs h6, #caption-slider-xs p {
+  font-size: 20px;
+}
+
+/* sales circle tags */
+.sale-circle-tag {
+  position:absolute;
+  top: -5px;
+  right: 5px;
+  width:50px;
+  height:50px;
+  background: #ff3300;  /* redish orange */
+  color: #ffffff;
+  border-radius: 25px;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* form */
+#form-container {
+  background-color: #0080ff; /* blue */
+  -ms-transform: skew(-5deg); /* IE 9 */
+  -webkit-transform: skew(-5deg); /* Safari prior 9.0 */
+  transform: skew(-5deg); /* Standard syntax */
+  padding: 0px 10px 50px 10px;
+}
+
+#form {
+  margin: 50px 20px;
+  -ms-transform: skew(5deg); /* IE 9 */
+  -webkit-transform: skew(5deg); /* Safari prior 9.0 */
+  transform: skew(5deg); /* Standard syntax */
+}
+
+@media only screen and (max-width: 991px) {
+  #contact-us p {
+    text-align: center;
+  }
+  #form-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+#submit {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+#submit:hover {
+  background: #0066cc; /* dark blue */
+}
+
+/* php error color */
+.error {
+  color: #FF0000; /* red */
+}
+
+/* success modal for when message has successful been sent to email */
+#successModal .modal-header {
+  background: #40bf40;
+  color: #ffffff;
+}
+
+#successModal .modal-footer {
+  background: #40bf40;
+}
