@@ -230,6 +230,7 @@ del {
   -webkit-transform: skew(-5deg); /* Safari prior 9.0 */
   transform: skew(-5deg); /* Standard syntax */
   padding: 0px 10px 50px 10px;
+  margin-bottom: 100px;
 }
 
 #form {
@@ -263,7 +264,8 @@ del {
 
 /* php error color */
 .error {
-  color: #FF0000; /* red */
+  color: #ff0000; /* red */
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
 /* success modal for when message has successful been sent to email */
@@ -274,4 +276,14 @@ del {
 
 #successModal .modal-footer {
   background: #40bf40;
+}
+
+/* failure modal for when message has unsuccessful been sent to email */
+#failureModal .modal-header {
+  background: #ff1a1a; /* red */
+  color: #ffffff;
+}
+
+#failureModal .modal-footer {
+  background: #ff1a1a; /* red */
 }

@@ -981,6 +981,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $comment = test_input($_POST["comment"]);
   }
+
+  /* BEGIN SEND EMAIL */
+  if (preg_match("/^[a-zA-Z ]*$/",$name) && filter_var($email, FILTER_VALIDATE_EMAIL) && preg_match('/[\d\s-()]{10,}$/',$phone)) {
+
+    echo '<script>
+    $(document).ready(function(){
+      $("#successModal").modal();
+    })
+    </script>';
+
+    $to = "andres@nuethic.com";
+
+    $subject = "Email sent from website created by Dallin Stephens";
+
+    $message = "
+    YOUR INPUT
+    Name: $name
+    Email: $email
+    Phone: $phone
+    Comment: $comment
+    ";
+
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // More headers
+    $headers = "From: $email" . "\r\n" . "CC: dallinstephens1@gmail.com";
+
+    mail($to,$subject,$message,$headers);
+
+  }
+
+  if (!preg_match("/^[a-zA-Z ]*$/",$name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/[\d\s-()]{10,}$/',$phone)) {
+
+    echo '<script>
+    $(document).ready(function(){
+      $("#failureModal").modal();
+    })
+    </script>';
+
+  }
+  /* END SEND EMAIL */
+
 }
 
 function test_input($data) {
@@ -1000,7 +1044,7 @@ function test_input($data) {
     </div>
     <div id="form-container" class="col-md-6">
 
-      <p><span class="error" style="position: relative; top: 60px;">* required field</span></p>
+      <p><span class="error" style="position: relative; top: 40px;">* required field</span></p>
 
       <form id="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="form-group">
@@ -1027,44 +1071,6 @@ function test_input($data) {
   </div>
 </div>
 
-<!-- BEGIN SEND AN EMAIL -->
-<?php
-
-if (preg_match("/^[a-zA-Z ]*$/",$name) && filter_var($email, FILTER_VALIDATE_EMAIL) && preg_match('/[\d\s-()]{10,}$/',$phone)) {
-
-  echo '<script>
-  $(document).ready(function(){
-    $("#successModal").modal();
-  })
-  </script>';
-
-  /* $to = "somebody@example.com, somebodyelse@example.com"; */
-
-  $to = "dallinstephens1@gmail.com";
-
-  $subject = "Email sent from website created by Dallin Stephens";
-
-  $message = "
-  YOUR INPUT
-  Name: $name
-  Email: $email
-  Phone: $phone
-  Comment: $comment
-  ";
-
-  // Always set content-type when sending HTML email
-  $headers = "MIME-Version: 1.0" . "\r\n";
-  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-  // More headers
-  $headers = "From: $email" . "\r\n";
-
-  mail($to,$subject,$message,$headers);
-
-}
-?>
-<!-- END SEND AN EMAIL -->
-
 <!-- Success Modal: modal appears when message has been successfully sent to email. -->
 <div class="container">
   <div class="modal fade" id="successModal" role="dialog">
@@ -1076,6 +1082,26 @@ if (preg_match("/^[a-zA-Z ]*$/",$name) && filter_var($email, FILTER_VALIDATE_EMA
         </div>
         <div class="modal-body">
           <p>Your message has been sent.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Failure Modal: modal appears when message has been unsuccessfully sent to email. -->
+<div class="container">
+  <div class="modal fade" id="failureModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Failure</h4>
+        </div>
+        <div class="modal-body">
+          <p>Sorry, your message has not been sent. Please try again by making the necessary corrections as indicated on the form.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
