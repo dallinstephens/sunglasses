@@ -3,11 +3,11 @@
 <head>
   <title>Sunglasses</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="bootstrap/css/bootstrap-3.4.1.min.css">
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="bootstrap/js/bootstrap-3.4.1.min.js"></script>
-  <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="page.css">
 
 <script>
 jQuery(function ($) {
@@ -57,27 +57,19 @@ jQuery(function ($) {
 <nav class="navbar">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li><a href="#">SALES: <b>Up to 50% OFF</b> on selected items</a></li>
+      <li class="hidden-xs"><a href="#">SALES: <b>Up to 50% OFF</b> on selected items</a></li>
+      <li class="hidden-lg hidden-md hidden-sm"><a href="#">SALES: <b>Up to 50% OFF</b></a></li>
     </ul>
   </div>
 </nav>
 
 <!-- top image and text -->
 <div id="top">
-  <div id="top-text" class="visible-lg visible-md">
+  <div id="top-text">
     <h1>SALES</h1>
     <h6>Up to 50% OFF</h6>
   </div>
-  <img id="top-image" src="images/top-image.jpg" alt="sunglasses">
-  <div class="visible-sm visible-xs">
-    <h1>SALES</h1>
-    <h6>Up to 50% OFF</h6>
-  </div>
-</div>
-
-<div id="top-text-2" class="text-center visible-sm visible-xs">
-  <h1>SALES</h1>
-  <h6>Up to 50% OFF</h6>
+  <div id="top-image"></div>
 </div>
 
 <div class="slider-margins container-fluid">
@@ -85,9 +77,9 @@ jQuery(function ($) {
     <h4 style="position: absolute; top: 20px; left: -15px;"><b>COLLECTIONS</b></h4>
     <hr style="position: absolute; top: 40px; left: -15px; width: 20px; border: 4px solid #d9d9d9;" />
   </div>
-  <div style="position: relative; width: 100%; height: 50px;">
-    <h5 id="see-collection" style="position: absolute; top: 0; right: -15px;"><a><b>SEE COLLECTION</b></a></h5>
-    <hr style="position: absolute; top: 10px; right: -15px; width: 118px; border: 2px solid #d9d9d9;" />
+  <div id="see-collection-container">
+    <h5 id="see-collection"><a><b>SEE COLLECTION</b></a></h5>
+    <hr id="see-collection-line" />
   </div>
 
   <!-- BEGIN IMAGE SLIDER LARGE SCREEN: 4 SLIDER IMAGES -->
@@ -99,8 +91,8 @@ jQuery(function ($) {
         <div class="row">
           <!-- image 1 -->
           <div class="col-xs-3">
+            <div class="sale-circle-tag">-15%</div>
             <img src="images/image1.jpg" alt="Image 1">
-            <span class="sale-circle-tag">-15%</span>
           </div>
           <!-- image 2 -->
           <div class="col-xs-3">
@@ -531,7 +523,7 @@ jQuery(function ($) {
 
 </div>
 
-<div class="slider-margins container-fluid">
+<div class="slider-margins caption-slider-top-margin container-fluid">
 
   <!-- BEGIN CAPTION SLIDER LARGE SCREEN: 4 SLIDER CAPTIONS -->
   <div id="caption-slider-lg" class="carousel slide hidden-md hidden-sm hidden-xs" data-ride="carousel" data-interval="false">
@@ -1017,9 +1009,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!preg_match("/^[a-zA-Z ]*$/",$name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/[\d\s-()]{10,}$/',$phone)) {
 
     echo '<script>
-    $(document).ready(function(){
-      $("#failureModal").modal();
-    })
+    //$(document).ready(function(){
+      //$("#failureModal").modal();
+    //})
     </script>';
 
   }
