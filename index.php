@@ -152,7 +152,7 @@ $(document).ready(function(){
     <div id="scroll-container" class="col-sm-10 col-xs-8 scroll-speed">
       <div style="width: 5000px;">
         <!-- product 1 -->
-        <div id="product1" class="image-container text-center">
+        <div id="product1" class="product-container text-center">
           <div class="sale-circle-tag">-15%</div>
           <img src="images/image1.jpg" alt="Image 1">
           <h6 class="hidden-sm hidden-xs">CARBON BLACK &#8231; CHROME WARWICK</h6>
@@ -160,7 +160,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$34</b></p>
         </div>
         <!-- product 2 -->
-        <div id="product2" class="image-container text-center">
+        <div id="product2" class="product-container text-center">
           <img src="images/image2.jpg" alt="Image 2">
           <span class="sale-circle-tag">-50%</span>
           <h6 class="hidden-sm hidden-xs">GOLD &#8231; YELLOW HILLS</h6>
@@ -168,7 +168,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$20</b></p>
         </div>
         <!-- product 3 -->
-        <div id="product3" class="image-container text-center">
+        <div id="product3" class="product-container text-center">
           <img src="images/image3.jpg" alt="Image 3">
           <span class="sale-circle-tag">-15%</span>
           <h6 class="hidden-sm hidden-xs">BLACK &#8231; DARK LAX</h6>
@@ -176,7 +176,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$34</b></p>
         </div>
         <!-- product 4 -->
-        <div id="product4" class="image-container text-center">
+        <div id="product4" class="product-container text-center">
           <img src="images/image4.jpg" alt="Image 4">
           <span class="sale-circle-tag">-10%</span>
           <h6 class="hidden-sm hidden-xs">AIR &#8231; SKY ONE</h6>
@@ -184,7 +184,7 @@ $(document).ready(function(){
           <p><del>$25</del>&nbsp;&nbsp;&nbsp;<b>$22<sup>.50</sup></b></p>
         </div>
         <!-- product 5 -->
-        <div id="product5" class="image-container text-center">
+        <div id="product5" class="product-container text-center">
           <img src="images/image5.jpg" alt="Image 5">
           <span class="sale-circle-tag">-15%</span>
           <h6 class="hidden-sm hidden-xs">CARBON PINK &#8231; CHROME CURVED</h6>
@@ -192,7 +192,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$34</b></p>
         </div>
         <!-- product 6 -->
-        <div id="product6" class="image-container text-center">
+        <div id="product6" class="product-container text-center">
           <img src="images/image6.jpg" alt="Image 6">
           <span class="sale-circle-tag">-25%</span>
           <h6 class="hidden-sm hidden-xs">CARBON PINK &#8231; CHROME CIRCULAR</h6>
@@ -200,7 +200,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$30</b></p>
         </div>
         <!-- product 7 -->
-        <div id="product7" class="image-container text-center">
+        <div id="product7" class="product-container text-center">
           <img src="images/image7.jpg" alt="Image 7">
           <span class="sale-circle-tag">-15%</span>
           <h6 class="hidden-sm hidden-xs">BROWN &#8231; DARK LAX</h6>
@@ -208,7 +208,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$34</b></p>
         </div>
         <!-- product 8 -->
-        <div id="product8" class="image-container text-center">
+        <div id="product8" class="product-container text-center">
           <img src="images/image8.jpg" alt="Image 8">
           <span class="sale-circle-tag">-50%</span>
           <h6 class="hidden-sm hidden-xs">SPOTTED &#8231; RED SKY</h6>
@@ -216,7 +216,7 @@ $(document).ready(function(){
           <p><del>$25</del>&nbsp;&nbsp;&nbsp;<b>$12<sup>.50</sup></b></p>
         </div>
         <!-- product 9 -->
-        <div id="product9" class="image-container text-center">
+        <div id="product9" class="product-container text-center">
           <img src="images/image9.jpg" alt="Image 9">
           <span class="sale-circle-tag">-30%</span>
           <h6 class="hidden-sm hidden-xs">CARBON BLACK &#8231; DARK LENS</h6>
@@ -224,7 +224,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$28</b></p>
         </div>
         <!-- product 10 -->
-        <div id="product10" class="image-container text-center">
+        <div id="product10" class="product-container text-center">
           <img src="images/image10.jpg" alt="Image 10">
           <span class="sale-circle-tag">-15%</span>
           <h6 class="hidden-sm hidden-xs">BLACK GOLD &#8231; HILLS</h6>
@@ -232,7 +232,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$34</b></p>
         </div>
         <!-- product 11 -->
-        <div id="product11" class="image-container text-center">
+        <div id="product11" class="product-container text-center">
           <img src="images/image11.jpg" alt="Image 11">
           <span class="sale-circle-tag">-10%</span>
           <h6 class="hidden-sm hidden-xs">GOLD LINING &#8231; DARK LAX</h6>
@@ -240,7 +240,7 @@ $(document).ready(function(){
           <p><del>$40</del>&nbsp;&nbsp;&nbsp;<b>$36</b></p>
         </div>
         <!-- product 12 -->
-        <div id="product12" class="image-container text-center">
+        <div id="product12" class="product-container text-center">
           <img src="images/image12.jpg" alt="Image 12">
           <span class="sale-circle-tag">-20%</span>
           <h6 class="hidden-sm hidden-xs">PURPLE AIR &#8231; SKY TWO</h6>

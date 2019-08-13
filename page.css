@@ -166,7 +166,7 @@ del {
   text-align: center;
 }
 
-#slider .image-container {
+#slider .product-container {
   position: relative; /* used to position sale circle tags */
   display: inline-block; /* used to keep images from stacking */
   margin: 30px 0; /* used to position sale circle tags */
@@ -228,7 +228,7 @@ del {
   background: #f9f9f9; /* light grey */
 }
 
-.image-container h6, .image-container p {
+.product-container h6, .product-container p {
   font-size: 13px;
 }
 
