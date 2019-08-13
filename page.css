@@ -232,14 +232,25 @@ del {
   font-size: 13px;
 }
 
-/* hide horizontal scrollbar and still be scrollable */
+/* hide horizontal scrollbar but still be scrollable */
+#slider::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 #slider {
-  overflow-x: hidden;
+  overflow-x: hidden; /* hide horizontal scrollbar but still be scrollable */
 }
 
 #scroll-container {
-  overflow-x: scroll;
+  overflow-x: scroll; /* hide horizontal scrollbar but still be scrollable */
   -webkit-overflow-scrolling: touch; /* swipe smoothly on WebKit based mobile browsers */
+  -ms-overflow-style: none;  /* IE 10+: hide horizontal scrollbar but still be scrollable */
+  scrollbar-width: none;  /* Firefox: hide horizontal scrollbar but still be scrollable */
+}
+
+#scroll-container::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome: hide horizontal scrollbar but still be scrollable */
 }
 
 @media only screen and (max-width: 767px){
