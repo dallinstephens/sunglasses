@@ -102,7 +102,7 @@ $(document).ready(function(){
       var leftPos = document.getElementById(id).offsetLeft;
 
       $('#scroll-container').stop().animate({
-          scrollLeft: leftPos
+          scrollLeft: leftPos - 10
       }, 500);
 
   });
@@ -335,9 +335,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (!preg_match("/^[a-zA-Z ]*$/",$name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/[\d\s-()]{10,}$/',$phone)) {
 
     echo '<script>
-    $(document).ready(function(){
-      $("#failureModal").modal();
-    })
+    //$(document).ready(function(){
+      //$("#failureModal").modal();
+    //})
     </script>';
 
   }

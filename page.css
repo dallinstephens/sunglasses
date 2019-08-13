@@ -240,11 +240,6 @@ del {
 #scroll-container {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch; /* swipe smoothly on WebKit based mobile browsers */
-  scroll-snap-type: x mandatory; /* for scroll snap */
-}
-
-.product-container {
-  scroll-snap-align: start; /* for scroll snap */
 }
 
 @media only screen and (max-width: 767px){
