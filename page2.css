@@ -145,10 +145,106 @@ body {
   border: 2px solid #d9d9d9;
 }
 
+/* slider margins */
+.slider-margins {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* slider margins for medium screens and smaller */
+@media only screen and (max-width: 1199px) {
+  .slider-margins {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.caption-slider-top-margin {
+  margin-top: -20px;
+}
+
+/* slider arrow controls */
+.carousel-control.left {
+  margin: 30px 10px 30px -20px;
+  background: none;
+  color: grey;
+  border: 1px solid grey;
+  width: 30px;
+}
+
+.carousel-control.right {
+  margin: 30px -20px 30px 10px;
+  background: none;
+  color: grey;
+  border: 1px solid grey;
+  width: 30px;
+}
+
+.carousel-control.left:hover, .carousel-control.right:hover {
+  background: #f9f9f9;
+}
+
+/* slider arrow font-size */
+.carousel-control .glyphicon-chevron-left:before,
+.carousel-control .glyphicon-chevron-right:before {
+  font-size: 20px;
+}
+
+/* slider arrow positioning */
+.carousel-control .glyphicon-chevron-left:before {
+  position: relative;
+  left: -5px;
+}
+
+.carousel-control .glyphicon-chevron-right:before {
+  position: relative;
+  right: -5px;
+}
+
+/* slider arrow positioning for extra small screens */
+@media only screen and (max-width: 767px) {
+  .carousel-control .glyphicon-chevron-left:before {
+    left: 0px;
+  }
+  .carousel-control .glyphicon-chevron-right:before {
+    right: 0px;
+  }
+}
+
 /* caption original price */
 del {
   color: #990000; /* red */
   font-weight: bold;
+}
+
+/* slider control margins */
+#image-slider-lg .row, #image-slider-md .row, #image-slider-sm .row, #image-slider-xs .row {
+  margin:30px 10px;
+}
+
+/* slider image width */
+#image-slider-lg img, #image-slider-md img, #image-slider-sm img, #image-slider-xs img {
+  width: 100%;
+}
+
+/* caption size for large screens */
+#caption-slider-lg h6, #caption-slider-lg p {
+  font-size: 13px;
+}
+
+/* caption size for medium screens */
+#caption-slider-md h6, #caption-slider-md p {
+  font-size: 15px;
+}
+
+/* caption size for small screens */
+#caption-slider-sm h6, #caption-slider-sm p {
+  font-size: 15px;
+}
+
+/* caption size for extra small screens */
+#caption-slider-xs h6, #caption-slider-xs p {
+  font-size: 20px;
 }
 
 /* sales circle tags */
@@ -164,90 +260,6 @@ del {
   line-height: 50px;
   font-weight: bold;
   text-align: center;
-}
-
-#slider .image-container {
-  position: relative; /* used to position sale circle tags */
-  display: inline-block; /* used to keep images from stacking */
-  margin: 30px 0; /* used to position sale circle tags */
-}
-
-#slider img {
-  height: 384.8px; /* same height for slider controls and images */
-  padding: 0 10px; /* space between images */
-}
-
-#slider-left-control, #slider-right-control {
-  height: 384.8px; /* same height for slider controls and images */
-  margin-top: 30px; /* used to position sale circle tags */
-  margin-bottom: 30px; /* used to position sale circle tags */
-}
-
-#slider-left-control > div {
-  position: relative; /* used to vertically center arrows */
-  z-index: 1; /* used so that sale-circle-tag is behind control */
-  width: 50px;
-  height: 384.8px;
-  border: 3px solid #f9f9f9;
-  background: #ffffff; /* used so that sale-circle-tag is behind control */
-  top: 50%;
-  left: 100%; /* used to position left control */
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#slider-right-control > div {
-  position: relative; /* used to vertically center arrows */
-  z-index: 1; /* used so that sale-circle-tag is behind control */
-  width: 50px;
-  height: 384.8px;
-  border: 3px solid #f9f9f9;
-  background: #ffffff; /* used so that sale-circle-tag is behind control */
-  top: 50%;
-  left: 10%; /* used to position right control */
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-/* used to vertically center arrows */
-#slider-left-control > div > span, #slider-right-control > div > span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  color: #808080;
-  font-size: 20px;
-}
-
-#slider-left-control > div:hover {
-  background: #f9f9f9; /* light grey */
-}
-
-#slider-right-control > div:hover {
-  background: #f9f9f9; /* light grey */
-}
-
-.image-container h6, .image-container p {
-  font-size: 13px;
-}
-
-/* hide horizontal scrollbar on desktop devices */
-#scroll-container {
-  overflow-x: hidden;
-}
-
-/* show horizontal scrollbar on mobile devices */
-@media only screen and (max-width: 991px){
-  #scroll-container {
-    overflow-x: scroll;
-  }
-}
-
-@media only screen and (max-width: 767px){
-  #slider img, #slider-left-control, #slider-right-control, #slider-left-control > div, #slider-right-control > div {
-    height: 200px;
-  }
 }
 
 /* form */
