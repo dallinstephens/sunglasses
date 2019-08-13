@@ -149,7 +149,7 @@ $(document).ready(function(){
         <span class="glyphicon glyphicon-menu-left"></span>
       </div>
     </div>
-    <div id="scroll-container" class="col-sm-10 col-xs-8 scroll-speed">
+    <div id="scroll-container" class="col-sm-10 col-xs-8">
       <div style="width: 5000px;">
         <!-- product 1 -->
         <div id="product1" class="product-container text-center">
