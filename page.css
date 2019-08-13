@@ -239,6 +239,7 @@ del {
 
 #scroll-container {
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; /* swipe smoothly on WebKit based mobile browsers */
 }
 
 @media only screen and (max-width: 767px){
