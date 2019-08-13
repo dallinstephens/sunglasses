@@ -232,16 +232,13 @@ del {
   font-size: 13px;
 }
 
-/* hide horizontal scrollbar on desktop devices */
-#scroll-container {
+/* hide horizontal scrollbar and still be scrollable */
+#slider {
   overflow-x: hidden;
 }
 
-/* show horizontal scrollbar on mobile devices */
-@media only screen and (max-width: 991px){
-  #scroll-container {
-    overflow-x: scroll;
-  }
+#scroll-container {
+  overflow-x: scroll;
 }
 
 @media only screen and (max-width: 767px){
