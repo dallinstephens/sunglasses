@@ -55,7 +55,7 @@ $(document).ready(function(){
       var leftPos = document.getElementById(id).offsetLeft;
 
       $('#scroll-container').stop().animate({
-          scrollLeft: leftPos-10
+          scrollLeft: leftPos
       }, 500);
 
   });
@@ -102,7 +102,7 @@ $(document).ready(function(){
       var leftPos = document.getElementById(id).offsetLeft;
 
       $('#scroll-container').stop().animate({
-          scrollLeft: leftPos - 10
+          scrollLeft: leftPos
       }, 500);
 
   });
